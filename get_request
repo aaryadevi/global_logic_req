@@ -1,0 +1,4 @@
+Scenario: Testing valid GET endpoint
+Given url 'https://httpbin.org/'
+When method GET
+Then status 200
