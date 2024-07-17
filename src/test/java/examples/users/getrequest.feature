@@ -19,7 +19,8 @@ Feature: to write scenario for testing  given url
   Scenario: get all status codes with delayed response
     Given path '#/Status_codes'
     When method get
-    *def responseDelay = 6000
+    *def responseDelay = 6000   
+    And eval response.setDelay(responseDelay)
     Then status 200
     And match $ contains{status code:"GET"}
     
